@@ -23,3 +23,11 @@ for (let i = 0; i < btnOpenModal.length; i++)
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+// KEY BOARD EVENTS this makes it so when you press a button on your keyboard the modal will close down
+//the function could also be called (e) for event
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
